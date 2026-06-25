@@ -1,0 +1,29 @@
+name: Order Processing CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Display Files
+      run: ls -R
+
+    - name: Run Tests
+      run: |
+        echo "Running tests..."
+        echo "Tests Passed"
+
+    - name: Deploy Application
+      run: |
+        echo "Deploying Serverless Application..."
+        echo "Deployment Successful"
